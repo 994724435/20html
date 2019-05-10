@@ -1,0 +1,173 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <!-- 防止IE8,7进入怪异模式 -->
+    <meta http-equiv="Content-Type" content="IE=Edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>      
+    <!-- js通用样式 -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- js通用样式 -->
+    <!-- 滚动条主要样式 -->
+    <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+    <!-- 滚动条主要样式 -->
+    <style type="text/css">
+    /*格式化样式*/
+    body {margin: 0;padding: 0;font-family:Microsoft YaHei!important;background-color: #F5F5F5;}
+    ul,dl,dt,dd,h1,h2,h3,h4,h5,h6,form { padding:0; margin:0;}
+    ul { list-style:none;text-align: center;}
+    img { border:0px;}
+
+    a{text-decoration: none;outline: none;color:#444;}
+    a:visited{text-decoration: none;}
+    a:hover{cursor: pointer;text-decoration: none; color:#3C97D6;}
+    a:focus{-moz-outline-style: none;text-decoration: none;}
+    img{border: 0;}
+    .clear{clear: both;}
+    /*格式化样式*/
+    /*播放器样式*/
+    .video_player{height:393px;}
+    .video_list_area{width: 100%;text-align: center;}
+        ul.video_list{margin: 7px 0px 0px 0;height: 107px; list-style:none;border-bottom: 10px solid #dcdcdc;margin-top: 260px;margin-left: 100px;}
+        ul.video_list li{float: left;font-size: 13px;font-weight: bold;line-height: 24px;margin-right: 5px;margin-top: 5px;}
+        ul.video_list li a{display:inline-block;padding: 15px 19px;margin-right:7px;width: 195px;height:72px;color: #fff;background-color: #7e2d2d;text-align: center;}
+        ul.video_list li.last a{margin-right:0;}
+        ul.video_list li a:hover,ul.video_list li a.on{color: #fff;background-color: #c12e2e;}
+        #ascrail2000-hr div{margin-left:0;}
+    .center{width: 100%;margin: 20px auto;margin-top:400px;}
+    
+    /*播放器样式*/
+    </style>
+    <!--- iframe切换停止播放js -->
+    <script type="text/javascript">
+// $(document).ready(function(){  
+//         play();  
+//     });  
+//      var vList = new Array("1_0.mp4", "2_0.mp4","3_0.mp4"); // 初始化播放列表  
+//     var vLen = vList.length;  
+//     var curr = 0;  
+//     var video = document.getElementById("myvideo");      
+//     video.addEventListener("ended", function(){  
+// //    alert("已播放完成，继续下一个视频");  
+// //document.getElementById("address").innerHTML =vList[curr]+"已播放完成，继续下一个视频";  
+//     play();  
+// });  
+//    function play() {  
+//         video.src = vList[curr];  
+//         video.load();  
+//         video.play();  
+//         document.getElementById("address").innerHTML ="正在播放"+vList[curr];  
+//         curr++;  
+//         if(curr >= vLen){  
+//             curr = 0; //重新循环播放  
+//         }  
+  
+//     }  
+
+
+    $(function() {
+        var iframe = $("div.video_player iframe");//播放页面
+        $('ul.video_list li a').click(function(){
+           
+        video.src = $(this).attr("name");  
+        video.load();  
+        video.play();  
+        // document.getElementById("address").innerHTML ="正在播放"+$(this).attr("name");  
+            // iframe.attr("src",$(this).attr("name"));//更改iframe src
+            // $('ul.video_list li a').removeClass('on');
+            // $(this).addClass('on');//给点击的元素添加正在播放标识
+        });
+        
+    });
+    </script>
+    <!-- iframe切换停止播放js -->
+</head>
+<body background="bg.png" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">
+<div class="center">
+    <!-- 播放器 -->
+ 
+
+    <div class="video_player">
+    <div style="text-align: center;">
+     <video  id="myvideo" src="#"  controls="controls" autoplay="autoplay" style="width: 98%"></video>    
+    <div id="address">  
+    </div>  
+ </div> 
+       <!--  <iframe src="1_0.mp4?autoPlay=true" width="700px" height="393px" frameborder="0" scrolling="No" allowtransparency></iframe> -->
+    </div>
+    <div class="dec_10 clearborder">
+         <div class="video_list_area">
+            <ul class="video_list">
+                <li><a class="on" name="1.mp4" >1  任冬梅 上海健康医学院附属嘉定区中心医院</a></li>
+                <li><a name="2.mp4">2   李  莉    上海市长宁区华阳街道社区卫生服务中心</a></li>
+                <li><a name="3.mp4">3   沈  英    复旦大学附属金山医院</a></li>
+                <li ><a name="4.mp4">4  沈  玲    上海市崇明区城桥镇社区卫生服务中心</a></li>
+                
+                  <li><a  name="5.mp4" >5   沈麒云 上海中医药大学附属龙华医院</a></li>
+                <li><a name="6.mp4">6   张  玥    上海市静安区大宁路街道社区卫生服务中心</a></li>
+                <li><a name="7.mp4">7   张荣荣 上海市徐汇区中心医院</a></li>
+                <li><a name="8.mp4">8   张  寅    上海交通大学医学院附属瑞金医院</a></li>
+
+<li><a name="9.mp4">9   陆金雯 上海市第五康复医院</a></li>
+<li><a name="10.mp4">10  陈  莹    上海市第四人民医院</a></li>
+<li><a name="11.mp4">11 金咏梅 上海市第七人民医院</a></li>
+<li><a name="12.mp4">12 周依群 上海市静安区中心医院</a></li>
+<li><a name="13.mp4">13 赵丽敏 上海市第十人民医院</a></li>
+<li><a name="14.mp4">14 胡三莲 上海市第六人民医院 </a></li>
+<li><a name="15.mp4">15 俞静娴 复旦大学附属中山医院</a></li>
+<li><a name="16.mp4">16 钱火红 长海医院</a></li>
+<li><a name="17.mp4">17 凌云霞 上海天佑医院</a></li>
+<li><a name="18.mp4">18 容根南 上海市宝山区仁和医院</a></li>
+<li><a name="19.mp4">19 黄  莺    复旦大学附属华山医院</a></li>
+<li class="last"><a name="20.mp4">20    曹  玲    复旦大学附属中山医院青浦分院</a></li>
+
+           </ul>
+
+        </div> 
+    </div> 
+    <!-- 播放器 -->
+</div>
+<!-- 美化滚动条js -->
+<script type="text/javascript">
+    var video_list_lenght=$("ul.video_list li").length;
+    // $("ul.video_list").css("width",$("ul.video_list li").width()*video_list_lenght-7);// 减去margin-right的7px长度
+    // $(".video_list_area").niceScroll({  
+    //     cursorcolor:" #c12e2e",  //#FF6666滚动条光标颜色
+    //     cursoropacitymax:1,      //改变不透明度，光标处于活动状态（scrollabar“可见”状态），范围从1到0
+    //     touchbehavior:false,     //使光标拖动滚动像在台式电脑触摸设备
+    //     autohidemode:false,      //是否隐藏滚动条
+    //     cursorwidth:"10px",      //像素光标的宽度
+    //     cursorborder:"0",        //游标边框css定义
+    //     cursorborderradius:"0px" //以像素为光标边界半径 
+    // }); 
+
+
+    $(document).ready(function(){  
+        play();  
+    });  
+     var vList = new Array("1.mp4", "2.mp4","3.mp4","4.mp4","5.mp4","6.mp4","7.mp4","8.mp4","9.mp4","10.mp4","11.mp4","12.mp4","13.mp4","14.mp4","15.mp4","16.mp4","17.mp4","18.mp4","19.mp4","20.mp4"); // 初始化播放列表  
+    var vLen = vList.length;  
+    var curr = 0;  
+    var video = document.getElementById("myvideo");      
+    video.addEventListener("ended", function(){  
+//    alert("已播放完成，继续下一个视频");  
+//document.getElementById("address").innerHTML =vList[curr]+"已播放完成，继续下一个视频";  
+    play();  
+});  
+   function play() {  
+        video.src = vList[curr];  
+        video.load();  
+        video.play();  
+        // document.getElementById("address").innerHTML ="正在播放"+vList[curr];  
+        curr++;  
+        if(curr >= vLen){  
+            curr = 0; //重新循环播放  
+        }  
+  
+    }  
+</script>
+<!-- 美化滚动条js -->
+<!-- 注意：jquery.nicescroll.js文件里的（rtlmode: "auto"属性。一般的滚动条都是垂直方向所以对此属性可能不注意。改为rtlmode：false,即可实现水平滚动。次文件已更改） -->
+</body>
+</html>

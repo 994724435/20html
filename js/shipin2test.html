@@ -1,0 +1,44 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title></title>  
+    <style type="text/css">
+
+    </style>
+</head>  
+<body> 
+ <div style="text-align: center;">
+     <video  id="myvideo" src="#"  controls="controls" autoplay="autoplay"></video>    
+    <div id="address"></div>  
+ </div> 
+    
+</body>  
+</html>  
+  <script src="js/jquery.js"></script>  
+<script language="javascript">  
+    $(document).ready(function(){  
+        play();  
+    });  
+     var vList = new Array("1_0.mp4", "2_0.mp4","3_0.mp4"); // 初始化播放列表  
+    var vLen = vList.length;  
+    var curr = 0;  
+    var video = document.getElementById("myvideo");      
+    video.addEventListener("ended", function(){  
+//    alert("已播放完成，继续下一个视频");  
+//document.getElementById("address").innerHTML =vList[curr]+"已播放完成，继续下一个视频";  
+    play();  
+});  
+   function play() {  
+        video.src = vList[curr];  
+        video.load();  
+        video.play();  
+        document.getElementById("address").innerHTML ="正在播放"+vList[curr];  
+        curr++;  
+        if(curr >= vLen){  
+            curr = 0; //重新循环播放  
+        }  
+  
+    }  
+     
+</script>  
